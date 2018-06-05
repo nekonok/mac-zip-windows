@@ -43,7 +43,7 @@ class WindowsZip{
         $sjis_folder = $this->windowsFileName($zipfolder, false );
         $handle = opendir($folder); 
         while (false !== ($file = readdir($handle)) ) { 
-            if( $file == '.' || $file == '..' || $file == '.DS_Store'){
+            if( $file == '.' || $file == '..' || $file == '.DS_Store' || strpos($file, '._') === 0){
                 continue;
             }
             $filename = $file;
