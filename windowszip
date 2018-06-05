@@ -18,7 +18,7 @@
  * ---------------------------------------
 */
 class WindowsZip{
-    public $テキスト改行コンバート = true;
+    public $テキスト改行コンバート = false;
     function windowsFileName( $utf8 , $isfile=true){ 
         if( $isfile ){
             if( mb_ereg("[\\\\/\:\*\?\"<>|]", $utf8) ){
